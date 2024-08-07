@@ -8,7 +8,7 @@ class Paddle(Turtle):
         self.shape("square")
         self.penup()
         self.color("white")
-        self.shapesize(stretch_wid=1, stretch_len=5)
+        self.shapesize(stretch_wid=1, stretch_len=4)
         self.goto(x, 0)
         self.left(90)
         self.up_key = up
@@ -16,9 +16,9 @@ class Paddle(Turtle):
 
     def paddle_loop(self, screen):
         def move(key):
-            if key == "up" and self.ycor() < 240:
+            if key == "up" and self.ycor() < 260:
                 self.goto(self.xcor(), self.ycor() + 10)
-            elif key == "down" and self.ycor() > -240:
+            elif key == "down" and self.ycor() > -260:
                 self.goto(self.xcor(), self.ycor() - 10)
             screen.update()
 
